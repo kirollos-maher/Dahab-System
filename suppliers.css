@@ -1,0 +1,370 @@
+/* ============================================
+   Suppliers & Dual Balance Styles
+   ============================================ */
+
+/* Entity Cards */
+.entity-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.entity-stat-card {
+    background: var(--bg-card);
+    padding: 16px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.entity-stat-card .stat-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+.entity-stat-card .stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* Balance Colors */
+.balance-positive {
+    color: var(--success);
+}
+
+.balance-negative {
+    color: var(--danger);
+}
+
+.balance-neutral {
+    color: var(--text-muted);
+}
+
+/* Entity Table */
+.entity-table-wrap {
+    overflow-x: auto;
+}
+
+.entity-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-sm);
+}
+
+.entity-table thead {
+    background: var(--bg-input);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.entity-table th {
+    padding: 10px 14px;
+    text-align: right;
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.entity-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+    vertical-align: middle;
+}
+
+.entity-table tbody tr {
+    transition: background var(--transition);
+    cursor: pointer;
+}
+
+.entity-table tbody tr:hover {
+    background: var(--bg-hover);
+}
+
+.entity-table .entity-name {
+    font-weight: 600;
+}
+
+.entity-table .entity-type {
+    font-size: 11px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    background: var(--bg-input);
+    color: var(--text-secondary);
+}
+
+.entity-table .entity-type.supplier {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.entity-table .entity-type.client {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.entity-table .balance-amount {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+}
+
+/* Quick Actions */
+.entity-actions {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.entity-actions .btn {
+    padding: 4px 10px;
+    font-size: 11px;
+}
+
+/* Dual Balance Modal */
+.dual-balance-modal .modal-content {
+    max-width: 600px;
+}
+
+.balance-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 16px;
+    background: var(--bg-input);
+    border-radius: var(--radius-sm);
+    margin: 12px 0;
+}
+
+.balance-item {
+    text-align: center;
+}
+
+.balance-item .balance-label {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.balance-item .balance-value {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.balance-item .balance-value.cash {
+    color: var(--accent-gold);
+}
+
+.balance-item .balance-value.gold {
+    color: #d4a843;
+}
+
+/* Transaction Form */
+.transaction-form .form-group {
+    margin-bottom: 14px;
+}
+
+.transaction-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.transaction-form .transaction-type-selector {
+    display: flex;
+    gap: 8px;
+    margin: 8px 0 12px;
+}
+
+.transaction-form .transaction-type-selector .btn {
+    flex: 1;
+    padding: 8px;
+    font-size: 13px;
+}
+
+.transaction-form .transaction-type-selector .btn.active {
+    background: var(--accent-gold);
+    color: var(--text-inverse);
+}
+
+/* Transaction Log */
+.transaction-log {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 12px;
+}
+
+.transaction-log .log-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 0.5px solid var(--border-color);
+    font-size: 13px;
+}
+
+.transaction-log .log-item .log-date {
+    color: var(--text-muted);
+    font-size: 11px;
+    min-width: 80px;
+}
+
+.transaction-log .log-item .log-desc {
+    flex: 1;
+    margin: 0 8px;
+}
+
+.transaction-log .log-item .log-cash {
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+    min-width: 80px;
+    text-align: left;
+}
+
+.transaction-log .log-item .log-gold {
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+    min-width: 70px;
+    text-align: left;
+}
+
+/* Statement Print */
+@media print {
+    .statement-print {
+        font-family: 'Courier New', monospace;
+        font-size: 10pt;
+        direction: rtl;
+        text-align: right;
+        padding: 8mm;
+        max-width: 210mm;
+        margin: 0 auto;
+        background: white;
+        color: black;
+    }
+    
+    .statement-print .statement-header {
+        text-align: center;
+        border-bottom: 2px solid #333;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .statement-print .statement-header h1 {
+        font-size: 18pt;
+        color: #b8922f;
+        margin: 0;
+    }
+    
+    .statement-print .statement-header .entity-info {
+        font-size: 11pt;
+        margin-top: 4px;
+    }
+    
+    .statement-print .statement-period {
+        text-align: center;
+        font-size: 9pt;
+        color: #666;
+        margin-bottom: 12px;
+    }
+    
+    .statement-print .statement-summary {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 10px;
+        background: #f8f8f8;
+        border-radius: 4px;
+        margin-bottom: 12px;
+    }
+    
+    .statement-print .statement-summary .summary-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 2px 0;
+    }
+    
+    .statement-print .statement-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 9pt;
+        margin: 8px 0;
+    }
+    
+    .statement-print .statement-table th {
+        background: #f0f0f0;
+        padding: 6px 8px;
+        border: 1px solid #ddd;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .statement-print .statement-table td {
+        padding: 5px 8px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+    
+    .statement-print .statement-table .text-right {
+        text-align: right;
+    }
+    
+    .statement-print .statement-footer {
+        text-align: center;
+        font-size: 8pt;
+        color: #999;
+        margin-top: 16px;
+        padding-top: 8px;
+        border-top: 1px solid #ddd;
+    }
+    
+    .statement-print .balance-summary {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+        padding: 10px;
+        background: #f0e6d0;
+        border-radius: 4px;
+        margin: 8px 0;
+        font-weight: bold;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .entity-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .balance-display {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .transaction-form .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .entity-table th,
+    .entity-table td {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+    
+    .entity-table .entity-actions .btn {
+        padding: 2px 6px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .entity-stats {
+        grid-template-columns: 1fr;
+    }
+}
