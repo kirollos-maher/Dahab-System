@@ -1,29 +1,28 @@
 /* ============================================
    DAHAB SYSTEM - Premium Design System
-   Version 2.0
+   Version 2.0 - Gold & Charcoal Theme
    ============================================ */
 
 /* ============================================
-   1. CSS VARIABLES
+   1. CSS VARIABLES - Design System
    ============================================ */
 
 :root {
-  /* ---------- الخلفيات ---------- */
-  --bg-primary: #F8F7F4;
+  /* ---------- الألوان الأساسية ---------- */
+  --bg-primary: #F7F6F2;
   --bg-surface: #FFFFFF;
-  --bg-sidebar: #171717;
+  --bg-sidebar: #181818;
   --bg-sidebar-hover: rgba(255,255,255,0.04);
-  --bg-input: #F4F3F0;
+  --bg-input: #F0EFEC;
   --bg-hover: #F0EFEC;
-  --bg-topbar: rgba(255,255,255,0.80);
-  --bg-topbar-blur: blur(12px);
+  --bg-topbar: rgba(255,255,255,0.85);
   
   /* ---------- الذهب (أنيق وغير مبالغ فيه) ---------- */
   --gold-primary: #C8A951;
   --gold-dark: #B0923F;
   --gold-light: #E8D9A8;
   --gold-subtle: rgba(200, 169, 81, 0.08);
-  --gold-glow: rgba(200, 169, 81, 0.12);
+  --gold-glow: rgba(200, 169, 81, 0.15);
   --gold-text: #B8923F;
   
   /* ---------- النصوص ---------- */
@@ -36,14 +35,12 @@
   --text-sidebar-hover: #D0D0D0;
   
   /* ---------- الحواف والظلال ---------- */
-  --border-color: #EBE8E0;
-  --border-light: #F0EFEC;
+  --border-color: #E7E2D8;
   --border-sidebar: rgba(255,255,255,0.04);
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
   --shadow-md: 0 4px 20px rgba(0,0,0,0.06);
   --shadow-lg: 0 8px 40px rgba(0,0,0,0.08);
   --shadow-xl: 0 16px 60px rgba(0,0,0,0.10);
-  --shadow-topbar: 0 1px 3px rgba(0,0,0,0.02);
   
   /* ---------- الزوايا ---------- */
   --radius-sm: 6px;
@@ -70,7 +67,6 @@
   --font-size-lg: 18px;
   --font-size-xl: 24px;
   --font-size-2xl: 32px;
-  --font-size-3xl: 40px;
   
   /* ---------- الهوامش ---------- */
   --space-1: 4px;
@@ -81,7 +77,6 @@
   --space-6: 24px;
   --space-8: 32px;
   --space-10: 40px;
-  --space-12: 48px;
   
   /* ---------- الأبعاد ---------- */
   --sidebar-width: 240px;
@@ -89,9 +84,9 @@
   --header-height: 64px;
   
   /* ---------- الانتقالات ---------- */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
 }
 
 /* ============================================
@@ -115,13 +110,11 @@
   --text-sidebar-hover: #BBBBBB;
   
   --border-color: #2A2A2A;
-  --border-light: #222222;
   --border-sidebar: rgba(255,255,255,0.04);
   --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
   --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
   --shadow-lg: 0 8px 40px rgba(0,0,0,0.5);
   --shadow-xl: 0 16px 60px rgba(0,0,0,0.6);
-  --shadow-topbar: 0 1px 3px rgba(0,0,0,0.2);
   
   --gold-subtle: rgba(200, 169, 81, 0.06);
   --gold-glow: rgba(200, 169, 81, 0.08);
@@ -191,12 +184,12 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
 }
 
-h1 { font-size: var(--font-size-3xl); }
-h2 { font-size: var(--font-size-2xl); }
-h3 { font-size: var(--font-size-xl); }
-h4 { font-size: var(--font-size-lg); }
-h5 { font-size: var(--font-size-base); }
-h6 { font-size: var(--font-size-sm); }
+h1 { font-size: var(--font-size-2xl); }
+h2 { font-size: var(--font-size-xl); }
+h3 { font-size: var(--font-size-lg); }
+h4 { font-size: var(--font-size-base); }
+h5 { font-size: var(--font-size-sm); }
+h6 { font-size: var(--font-size-xs); }
 
 a {
   color: var(--gold-primary);
@@ -219,7 +212,7 @@ a:hover {
 }
 
 /* ============================================
-   7. SIDEBAR - Premium Redesign
+   7. SIDEBAR
    ============================================ */
 
 .sidebar {
@@ -239,7 +232,6 @@ a:hover {
   overflow: hidden;
 }
 
-/* Brand / Logo */
 .sidebar-header {
   padding: var(--space-5) var(--space-4);
   display: flex;
@@ -281,7 +273,6 @@ a:hover {
   color: var(--gold-primary);
 }
 
-/* Theme Toggle */
 .theme-toggle {
   background: rgba(255,255,255,0.04);
   border: none;
@@ -311,16 +302,6 @@ a:hover {
   gap: 1px;
   overflow-y: auto;
   overflow-x: hidden;
-}
-
-.nav-section-label {
-  font-size: var(--font-size-xs);
-  color: var(--text-sidebar);
-  opacity: 0.4;
-  padding: var(--space-3) var(--space-3) var(--space-1);
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
 }
 
 .nav-link {
@@ -353,6 +334,7 @@ a:hover {
   color: var(--text-sidebar);
   opacity: 0.6;
   transition: all var(--transition-fast);
+  font-size: 16px;
 }
 
 .nav-link .nav-label {
@@ -456,9 +438,7 @@ a:hover {
 .sidebar.collapsed .logo-text,
 .sidebar.collapsed .nav-label,
 .sidebar.collapsed .user-name,
-.sidebar.collapsed .logout-label,
-.sidebar.collapsed .nav-section-label,
-.sidebar.collapsed .branch-label-text {
+.sidebar.collapsed .logout-label {
   display: none;
 }
 
@@ -476,6 +456,7 @@ a:hover {
   margin: 0;
   width: 24px;
   height: 24px;
+  font-size: 20px;
 }
 
 .sidebar.collapsed .user-info {
@@ -512,8 +493,8 @@ a:hover {
 
 .top-bar {
   background: var(--bg-topbar);
-  backdrop-filter: var(--bg-topbar-blur);
-  -webkit-backdrop-filter: var(--bg-topbar-blur);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 0 var(--space-5);
   height: var(--header-height);
   min-height: var(--header-height);
@@ -526,7 +507,6 @@ a:hover {
   transition: background var(--transition-slow), border-color var(--transition-slow);
 }
 
-/* Left Section */
 .top-bar-left {
   display: flex;
   align-items: center;
@@ -551,7 +531,6 @@ a:hover {
   background: var(--bg-hover);
 }
 
-/* Page Title */
 .page-title {
   font-size: var(--font-size-lg);
   font-weight: 600;
@@ -559,10 +538,6 @@ a:hover {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-}
-
-.page-title .title-icon {
-  color: var(--gold-primary);
 }
 
 /* Branch Selector */
@@ -606,7 +581,7 @@ a:hover {
   outline: none;
 }
 
-/* Center - Gold Ticker */
+/* Gold Ticker */
 .top-bar-center {
   flex: 1;
   display: flex;
@@ -667,7 +642,7 @@ a:hover {
   min-width: 40px;
 }
 
-/* Right Section */
+/* Top Bar Right */
 .top-bar-right {
   display: flex;
   align-items: center;
@@ -675,7 +650,6 @@ a:hover {
   flex-shrink: 0;
 }
 
-/* Language Switcher */
 .lang-switcher {
   display: flex;
   border: 1px solid var(--border-color);
@@ -703,7 +677,6 @@ a:hover {
   background: var(--bg-hover);
 }
 
-/* Theme Toggle (Top) */
 .theme-toggle-top {
   background: none;
   border: none;
@@ -755,10 +728,6 @@ a:hover {
   gap: var(--space-2);
 }
 
-.page-header h2 .page-icon {
-  color: var(--gold-primary);
-}
-
 .page-actions {
   display: flex;
   gap: var(--space-2);
@@ -766,7 +735,7 @@ a:hover {
 }
 
 /* ============================================
-   12. BUTTONS - Premium Redesign
+   12. BUTTONS
    ============================================ */
 
 .btn {
@@ -785,7 +754,6 @@ a:hover {
   text-decoration: none;
   white-space: nowrap;
   min-height: 36px;
-  position: relative;
 }
 
 .btn:disabled {
@@ -793,7 +761,6 @@ a:hover {
   cursor: not-allowed;
 }
 
-/* Primary */
 .btn-primary {
   background: var(--text-primary);
   color: var(--text-white);
@@ -805,11 +772,6 @@ a:hover {
   box-shadow: var(--shadow-md);
 }
 
-.btn-primary:active:not(:disabled) {
-  transform: translateY(0);
-}
-
-/* Gold Primary */
 .btn-gold {
   background: var(--gold-primary);
   color: #FFFFFF;
@@ -821,7 +783,6 @@ a:hover {
   box-shadow: 0 4px 16px var(--gold-glow);
 }
 
-/* Success */
 .btn-success {
   background: var(--success);
   color: #FFFFFF;
@@ -832,7 +793,6 @@ a:hover {
   transform: translateY(-1px);
 }
 
-/* Danger */
 .btn-danger {
   background: var(--danger);
   color: #FFFFFF;
@@ -843,7 +803,6 @@ a:hover {
   transform: translateY(-1px);
 }
 
-/* Outline */
 .btn-outline {
   background: transparent;
   border: 1.5px solid var(--border-color);
@@ -856,7 +815,6 @@ a:hover {
   background: var(--gold-subtle);
 }
 
-/* Sizes */
 .btn-sm {
   padding: var(--space-1) var(--space-2);
   font-size: var(--font-size-xs);
@@ -870,7 +828,7 @@ a:hover {
 }
 
 /* ============================================
-   13. CARDS - Premium Redesign
+   13. CARDS
    ============================================ */
 
 .card {
@@ -912,7 +870,7 @@ a:hover {
 }
 
 /* ============================================
-   14. TABLES - Premium Redesign
+   14. TABLES
    ============================================ */
 
 .table-responsive {
@@ -1016,7 +974,7 @@ a:hover {
 }
 
 /* ============================================
-   15. FORMS - Premium Redesign
+   15. FORMS
    ============================================ */
 
 .form-group {
@@ -1065,7 +1023,7 @@ a:hover {
 }
 
 /* ============================================
-   16. MODALS - Premium Redesign
+   16. MODALS
    ============================================ */
 
 .modal-overlay {
@@ -1193,7 +1151,34 @@ a:hover {
 }
 
 /* ============================================
-   19. RESPONSIVE
+   19. LOADING STATE
+   ============================================ */
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  gap: var(--space-4);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--gold-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.loading-text {
+  color: var(--text-muted);
+  font-size: var(--font-size-base);
+}
+
+/* ============================================
+   20. RESPONSIVE
    ============================================ */
 
 @media (max-width: 1024px) {
@@ -1228,9 +1213,7 @@ a:hover {
   .sidebar.collapsed .logo-text,
   .sidebar.collapsed .nav-label,
   .sidebar.collapsed .user-name,
-  .sidebar.collapsed .logout-label,
-  .sidebar.collapsed .nav-section-label,
-  .sidebar.collapsed .branch-label-text {
+  .sidebar.collapsed .logout-label {
     display: inline;
   }
   
@@ -1338,7 +1321,7 @@ a:hover {
 }
 
 /* ============================================
-   20. PRINT
+   21. PRINT
    ============================================ */
 
 @media print {
@@ -1359,7 +1342,7 @@ a:hover {
 }
 
 /* ============================================
-   21. UTILITIES
+   22. UTILITIES
    ============================================ */
 
 .text-center { text-align: center; }
