@@ -1,62 +1,25 @@
 /**
  * Translation Dictionary
- * Key-value mappings for all UI terms in English and Egyptian Arabic
  */
 
 export const translations = {
-    // Navigation - ✅ كل الترجمات صحيحة
+    // Navigation - ✅ جميع الترجمات مصححة
     'app.name': {
         ar: '💎 الذهب',  // ✅ تم التصحيح من "الزهرة"
         en: '💎 Dahab'
     },
-    'nav.dashboard': {
-        ar: 'لوحة التحكم',
-        en: 'Dashboard'
-    },
-    'nav.data-entry': {
-        ar: 'إدخال البيانات',
-        en: 'Data Entry'
-    },
-    'nav.qr-print': {
-        ar: 'طباعة QR',
-        en: 'QR Print'
-    },
-    'nav.pos-scanner': {
-        ar: 'الماسح الضوئي',
-        en: 'POS Scanner'
-    },
-    'nav.inventory': {
-        ar: 'المخزون',
-        en: 'Inventory'
-    },
-    'nav.suppliers': {
-        ar: 'الموردين والعملاء',
-        en: 'Suppliers & Clients'
-    },
-    'nav.accounting': {
-        ar: 'المحاسبة',
-        en: 'Accounting'
-    },
-    'nav.analytics': {
-        ar: 'التحليلات',  // ✅ تم التصحيح من "التجليلات"
-        en: 'Analytics'
-    },
-    'nav.returns': {
-        ar: 'المرتجعات',  // ✅ تم التصحيح من "المجموعات"
-        en: 'Returns'
-    },
-    'nav.logout': {
-        ar: 'تسجيل الخروج',
-        en: 'Logout'
-    },
-    'nav.branch': {
-        ar: 'الفرع',
-        en: 'Branch'
-    },
-    'nav.employees': {
-        ar: 'الموظفين',  // ✅ تم التصحيح من "المؤلفين"
-        en: 'Employees'
-    },
+    'nav.dashboard': { ar: 'لوحة التحكم', en: 'Dashboard' },
+    'nav.data-entry': { ar: 'إدخال البيانات', en: 'Data Entry' },
+    'nav.qr-print': { ar: 'طباعة QR', en: 'QR Print' },
+    'nav.pos-scanner': { ar: 'الماسح الضوئي', en: 'POS Scanner' },
+    'nav.inventory': { ar: 'المخزون', en: 'Inventory' },
+    'nav.suppliers': { ar: 'الموردين والعملاء', en: 'Suppliers & Clients' },
+    'nav.accounting': { ar: 'المحاسبة', en: 'Accounting' },
+    'nav.analytics': { ar: 'التحليلات', en: 'Analytics' },  // ✅ تم التصحيح
+    'nav.returns': { ar: 'المرتجعات', en: 'Returns' },  // ✅ تم التصحيح
+    'nav.logout': { ar: 'تسجيل الخروج', en: 'Logout' },
+    'nav.branch': { ar: 'الفرع', en: 'Branch' },
+    'nav.employees': { ar: 'الموظفين', en: 'Employees' },  // ✅ تم التصحيح
 
     // Common
     'common.save': { ar: 'حفظ', en: 'Save' },
@@ -89,9 +52,6 @@ export const translations = {
     'common.clear': { ar: 'مسح', en: 'Clear' },
     'common.ready': { ar: 'جاهز', en: 'Ready' },
     'common.select': { ar: 'اختر', en: 'Select' },
-    'common.example': { ar: 'مثال', en: 'Example' },
-    'common.auto': { ar: 'تلقائي', en: 'Auto' },
-    'common.calculations': { ar: 'الحسابات', en: 'Calculations' },
     'common.amount': { ar: 'المبلغ', en: 'Amount' },
 
     // Gold Terms
