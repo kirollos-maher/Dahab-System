@@ -4,11 +4,9 @@
  */
 
 export const translations = {
-    // ============================================
-    // NAVIGATION - التصحيح الكامل
-    // ============================================
+    // Navigation - ✅ كل الترجمات صحيحة
     'app.name': {
-        ar: '💎 الذهب',
+        ar: '💎 الذهب',  // ✅ تم التصحيح من "الزهرة"
         en: '💎 Dahab'
     },
     'nav.dashboard': {
@@ -60,9 +58,7 @@ export const translations = {
         en: 'Employees'
     },
 
-    // ============================================
-    // COMMON
-    // ============================================
+    // Common
     'common.save': { ar: 'حفظ', en: 'Save' },
     'common.cancel': { ar: 'إلغاء', en: 'Cancel' },
     'common.delete': { ar: 'حذف', en: 'Delete' },
@@ -98,9 +94,7 @@ export const translations = {
     'common.calculations': { ar: 'الحسابات', en: 'Calculations' },
     'common.amount': { ar: 'المبلغ', en: 'Amount' },
 
-    // ============================================
-    // GOLD TERMS
-    // ============================================
+    // Gold Terms
     'gold.carat': { ar: 'العيار', en: 'Carat' },
     'gold.workmanship': { ar: 'المصنعية', en: 'Workmanship' },
     'gold.pure-gold': { ar: 'الذهب الصافي', en: 'Pure Gold' },
@@ -117,9 +111,7 @@ export const translations = {
     'gold.purity': { ar: 'النقاء', en: 'Purity' },
     'gold.gold-value': { ar: 'قيمة الذهب', en: 'Gold Value' },
 
-    // ============================================
-    // INVENTORY
-    // ============================================
+    // Inventory
     'inventory.title': { ar: 'إدارة المخزون', en: 'Inventory Management' },
     'inventory.in-stock': { ar: 'متوفر', en: 'In Stock' },
     'inventory.sold': { ar: 'مباع', en: 'Sold' },
@@ -131,9 +123,7 @@ export const translations = {
     'inventory.export-excel': { ar: 'تصدير Excel', en: 'Export Excel' },
     'inventory.import-excel': { ar: 'استيراد Excel', en: 'Import Excel' },
 
-    // ============================================
     // POS
-    // ============================================
     'pos.title': { ar: 'نقطة البيع', en: 'Point of Sale' },
     'pos.scanner': { ar: 'الماسح الضوئي', en: 'Scanner' },
     'pos.cart': { ar: 'سلة البيع', en: 'Cart' },
@@ -145,9 +135,7 @@ export const translations = {
     'pos.approved': { ar: 'موافق عليه', en: 'Approved' },
     'pos.rejected': { ar: 'مرفوض', en: 'Rejected' },
 
-    // ============================================
-    // SUPPLIERS
-    // ============================================
+    // Suppliers
     'suppliers.title': { ar: 'الموردين والعملاء', en: 'Suppliers & Clients' },
     'suppliers.supplier': { ar: 'مورد', en: 'Supplier' },
     'suppliers.client': { ar: 'عميل', en: 'Client' },
@@ -161,9 +149,7 @@ export const translations = {
     'suppliers.pay-cash': { ar: 'دفع نقدي', en: 'Pay Cash' },
     'suppliers.return-gold': { ar: 'إرجاع ذهب', en: 'Return Gold' },
 
-    // ============================================
-    // ACCOUNTING
-    // ============================================
+    // Accounting
     'accounting.title': { ar: 'المحاسبة', en: 'Accounting' },
     'accounting.tier1': { ar: 'المستوى 1: الوردية', en: 'Tier 1: Shift' },
     'accounting.tier2': { ar: 'المستوى 2: المصروفات', en: 'Tier 2: Expenses' },
@@ -175,9 +161,7 @@ export const translations = {
     'accounting.net-profit': { ar: 'صافي الربح', en: 'Net Profit' },
     'accounting.vault-valuation': { ar: 'تقييم الخزينة', en: 'Vault Valuation' },
 
-    // ============================================
-    // ANALYTICS
-    // ============================================
+    // Analytics
     'analytics.title': { ar: 'التحليلات', en: 'Analytics' },
     'analytics.sales-trend': { ar: 'اتجاه المبيعات', en: 'Sales Trend' },
     'analytics.carat-distribution': { ar: 'توزيع العيارات', en: 'Carat Distribution' },
@@ -185,9 +169,7 @@ export const translations = {
     'analytics.fast-moving': { ar: 'القطع سريعة الحركة', en: 'Fast-Moving Items' },
     'analytics.dead-stock': { ar: 'المخزون الراكد', en: 'Dead Stock' },
 
-    // ============================================
-    // RETURNS
-    // ============================================
+    // Returns
     'returns.title': { ar: 'المرتجعات', en: 'Returns' },
     'returns.sales-return': { ar: 'مرتجع مبيعات', en: 'Sales Return' },
     'returns.buyback': { ar: 'شراء كسر', en: 'Gold Buyback' },
@@ -195,9 +177,7 @@ export const translations = {
     'returns.process-return': { ar: 'تأكيد المرتجع', en: 'Process Return' },
     'returns.calculate': { ar: 'حساب القيمة', en: 'Calculate' },
 
-    // ============================================
-    // DASHBOARD
-    // ============================================
+    // Dashboard
     'dashboard.title': { ar: 'لوحة التحكم', en: 'Executive Dashboard' },
     'dashboard.total-gold': { ar: 'إجمالي الذهب في الخزينة', en: 'Total Vault Gold' },
     'dashboard.daily-sales': { ar: 'مبيعات اليوم', en: 'Daily Sales' },
@@ -207,9 +187,7 @@ export const translations = {
     'dashboard.recent-activity': { ar: 'النشاطات الأخيرة', en: 'Recent Activity' },
     'dashboard.last-update': { ar: 'آخر تحديث', en: 'Last Update' },
 
-    // ============================================
-    // AUTH
-    // ============================================
+    // Auth
     'auth.login': { ar: 'تسجيل الدخول', en: 'Login' },
     'auth.logout': { ar: 'تسجيل الخروج', en: 'Logout' },
     'auth.email': { ar: 'البريد الإلكتروني', en: 'Email' },
@@ -217,9 +195,7 @@ export const translations = {
     'auth.welcome': { ar: 'مرحباً بك في نظام الذهب', en: 'Welcome to Dahab System' },
     'auth.login-error': { ar: 'فشل تسجيل الدخول', en: 'Login failed' },
 
-    // ============================================
-    // EMPLOYEES
-    // ============================================
+    // Employees
     'employee.role': { ar: 'الدور', en: 'Role' },
     'employee.phone': { ar: 'الهاتف', en: 'Phone' },
     'employee.branch': { ar: 'الفرع', en: 'Branch' },
@@ -227,45 +203,33 @@ export const translations = {
     'employee.shift': { ar: 'الوردية', en: 'Shift' },
     'employee.audit': { ar: 'سجل النشاطات', en: 'Audit Log' },
 
-    // ============================================
-    // TIME
-    // ============================================
+    // Time
     'time.now': { ar: 'الآن', en: 'Now' },
     'time.minutes': { ar: 'دقيقة', en: 'minute' },
     'time.hours': { ar: 'ساعة', en: 'hour' },
     'time.days': { ar: 'يوم', en: 'day' },
     'time.ago': { ar: 'منذ', en: 'ago' },
 
-    // ============================================
-    // REPORTS
-    // ============================================
+    // Reports
     'report.gross-sales': { ar: 'إجمالي المبيعات', en: 'Gross Sales' },
     'report.total-expenses': { ar: 'إجمالي المصروفات', en: 'Total Expenses' },
     'report.workmanship-total': { ar: 'إجمالي المصنعية', en: 'Total Workmanship' },
 
-    // ============================================
-    // BRANCH
-    // ============================================
+    // Branch
     'branch.main-warehouse': { ar: 'المخزن الرئيسي', en: 'Main Warehouse' },
     'branch.select': { ar: 'اختر الفرع', en: 'Select Branch' },
     'branch.no-branches': { ar: 'لا توجد فروع', en: 'No branches available' },
 
-    // ============================================
-    // UNITS
-    // ============================================
+    // Units
     'unit.egp': { ar: 'ج.م', en: 'EGP' },
     'unit.gram': { ar: 'جم', en: 'g' },
 
-    // ============================================
-    // MODALS
-    // ============================================
+    // Modals
     'modal.confirm-delete': { ar: 'هل أنت متأكد من الحذف؟', en: 'Are you sure you want to delete?' },
     'modal.confirm-close': { ar: 'هل أنت متأكد من إغلاق الوردية؟', en: 'Are you sure you want to close the shift?' },
     'modal.confirm-reject': { ar: 'هل أنت متأكد من رفض هذه الفاتورة؟', en: 'Are you sure you want to reject this invoice?' },
 
-    // ============================================
-    // FORMS
-    // ============================================
+    // Forms
     'form.name': { ar: 'الاسم', en: 'Name' },
     'form.phone': { ar: 'الهاتف', en: 'Phone' },
     'form.email': { ar: 'البريد الإلكتروني', en: 'Email' },
@@ -276,9 +240,6 @@ export const translations = {
     'form.salesperson': { ar: 'المندوب', en: 'Salesperson' }
 };
 
-/**
- * Get translation for a key
- */
 export function getTranslation(key, lang = 'ar') {
     const translation = translations[key];
     if (!translation) {
@@ -288,9 +249,6 @@ export function getTranslation(key, lang = 'ar') {
     return translation[lang] || translation['en'] || key;
 }
 
-/**
- * Get all translations for a language
- */
 export function getAllTranslations(lang = 'ar') {
     const result = {};
     for (const [key, value] of Object.entries(translations)) {
