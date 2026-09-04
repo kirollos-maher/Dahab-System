@@ -3,24 +3,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title data-i18n="app.name">نظام إدارة الذهب والمجوهرات | Gold Management System</title>
+    <title>نظام إدارة الذهب والمجوهرات</title>
     
-    <!-- Google Fonts - Cairo (Arabic) -->
+    <!-- Google Fonts - Cairo -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     
-    <!-- External Libraries via CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
-    </script>
-    <script src="https://unpkg.com/lucide@latest">
-    </script>
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- CSS Files - CORRECTED PATHS (relative, not root-absolute) -->
+    <!-- CSS Files -->
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/print.css" />
     <link rel="stylesheet" href="css/pos.css" />
@@ -34,58 +29,56 @@
 <body>
     <!-- App Container -->
     <div id="app">
-        <!-- Sidebar Navigation -->
-        <aside id="sidebar" class="sidebar" role="navigation" aria-label="Main Navigation">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar" role="navigation">
             <div class="sidebar-header">
                 <div class="logo-container">
                     <span class="logo-icon">✦</span>
                     <span class="logo-text"><span class="gold">ذهب</span> Dahab</span>
                 </div>
-                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-                    <span class="theme-icon">🌙</span>
-                </button>
+                <button id="themeToggle" class="theme-toggle">🌙</button>
             </div>
 
             <nav class="sidebar-nav">
-                <a href="#dashboard" class="nav-link active" data-page="dashboard" data-tooltip="nav.dashboard">
+                <a href="#dashboard" class="nav-link active" data-page="dashboard">
                     <span class="nav-icon">📊</span>
-                    <span class="nav-label" data-i18n="nav.dashboard">لوحة التحكم</span>
+                    <span class="nav-label">لوحة التحكم</span>
                 </a>
-                <a href="#data-entry" class="nav-link" data-page="data-entry" data-tooltip="nav.data-entry">
+                <a href="#data-entry" class="nav-link" data-page="data-entry">
                     <span class="nav-icon">✏️</span>
-                    <span class="nav-label" data-i18n="nav.data-entry">إدخال البيانات</span>
+                    <span class="nav-label">إدخال البيانات</span>
                 </a>
-                <a href="#qr-print" class="nav-link" data-page="qr-print" data-tooltip="nav.qr-print">
+                <a href="#qr-print" class="nav-link" data-page="qr-print">
                     <span class="nav-icon">🏷️</span>
-                    <span class="nav-label" data-i18n="nav.qr-print">طباعة QR</span>
+                    <span class="nav-label">طباعة QR</span>
                 </a>
-                <a href="#pos-scanner" class="nav-link" data-page="pos-scanner" data-tooltip="nav.pos-scanner">
+                <a href="#pos-scanner" class="nav-link" data-page="pos-scanner">
                     <span class="nav-icon">📱</span>
-                    <span class="nav-label" data-i18n="nav.pos-scanner">الماسح الضوئي</span>
+                    <span class="nav-label">الماسح الضوئي</span>
                 </a>
-                <a href="#inventory" class="nav-link" data-page="inventory" data-tooltip="nav.inventory">
+                <a href="#inventory" class="nav-link" data-page="inventory">
                     <span class="nav-icon">📦</span>
-                    <span class="nav-label" data-i18n="nav.inventory">المخزون</span>
+                    <span class="nav-label">المخزون</span>
                 </a>
-                <a href="#suppliers" class="nav-link" data-page="suppliers" data-tooltip="nav.suppliers">
+                <a href="#suppliers" class="nav-link" data-page="suppliers">
                     <span class="nav-icon">🤝</span>
-                    <span class="nav-label" data-i18n="nav.suppliers">الموردين والعملاء</span>
+                    <span class="nav-label">الموردين والعملاء</span>
                 </a>
-                <a href="#accounting" class="nav-link" data-page="accounting" data-tooltip="nav.accounting">
+                <a href="#accounting" class="nav-link" data-page="accounting">
                     <span class="nav-icon">💰</span>
-                    <span class="nav-label" data-i18n="nav.accounting">المحاسبة</span>
+                    <span class="nav-label">المحاسبة</span>
                 </a>
-                <a href="#analytics" class="nav-link" data-page="analytics" data-tooltip="nav.analytics">
+                <a href="#analytics" class="nav-link" data-page="analytics">
                     <span class="nav-icon">📈</span>
-                    <span class="nav-label" data-i18n="nav.analytics">التحليلات</span>
+                    <span class="nav-label">التحليلات</span>
                 </a>
-                <a href="#returns" class="nav-link" data-page="returns" data-tooltip="nav.returns">
+                <a href="#returns" class="nav-link" data-page="returns">
                     <span class="nav-icon">↩️</span>
-                    <span class="nav-label" data-i18n="nav.returns">المرتجعات</span>
+                    <span class="nav-label">المرتجعات</span>
                 </a>
-                <a href="#employees" class="nav-link" data-page="employees" data-tooltip="nav.employees">
+                <a href="#employees" class="nav-link" data-page="employees">
                     <span class="nav-icon">👥</span>
-                    <span class="nav-label" data-i18n="nav.employees">الموظفين</span>
+                    <span class="nav-label">الموظفين</span>
                 </a>
             </nav>
 
@@ -96,7 +89,7 @@
                 </div>
                 <button id="logoutBtn" class="logout-btn">
                     <span class="logout-icon">🚪</span>
-                    <span class="logout-label" data-i18n="nav.logout">تسجيل الخروج</span>
+                    <span class="logout-label">تسجيل الخروج</span>
                 </button>
             </div>
         </aside>
@@ -106,16 +99,14 @@
             <!-- Top Bar -->
             <header class="top-bar">
                 <div class="top-bar-left">
-                    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle sidebar">
-                        <span>☰</span>
-                    </button>
+                    <button id="sidebarToggle" class="sidebar-toggle">☰</button>
                     <div class="branch-selector-wrapper">
                         <label for="branchSelector" class="branch-label">
                             <span class="branch-icon">🏢</span>
-                            <span class="branch-label-text" data-i18n="nav.branch">الفرع</span>
+                            <span class="branch-label-text">الفرع</span>
                         </label>
-                        <select id="branchSelector" class="branch-selector" aria-label="Select branch">
-                            <option value="" data-i18n="common.loading">جاري التحميل...</option>
+                        <select id="branchSelector" class="branch-selector">
+                            <option value="">جاري التحميل...</option>
                         </select>
                     </div>
                 </div>
@@ -138,7 +129,7 @@
                         </div>
                         <div class="ticker-divider"></div>
                         <div class="ticker-item ticker-update">
-                            <span class="ticker-label" data-i18n="dashboard.last-update">آخر تحديث</span>
+                            <span class="ticker-label">آخر تحديث</span>
                             <span class="ticker-value ticker-time" id="tickerUpdateTime">--</span>
                         </div>
                     </div>
@@ -146,21 +137,18 @@
 
                 <div class="top-bar-right">
                     <div class="lang-switcher">
-                        <button class="lang-btn active" data-lang="ar" aria-label="lang.arabic">🇸🇦 عربي</button>
-                        <button class="lang-btn" data-lang="en" aria-label="lang.english">🇬🇧 EN</button>
+                        <button class="lang-btn active" data-lang="ar">🇸🇦 عربي</button>
+                        <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
                     </div>
-                    <button id="themeToggleTop" class="theme-toggle-top" aria-label="theme.toggle">
-                        <span class="theme-icon-top">🌙</span>
-                    </button>
+                    <button id="themeToggleTop" class="theme-toggle-top">🌙</button>
                 </div>
             </header>
 
             <!-- Page Content -->
             <div id="pageContent" class="page-content">
-                <!-- Dynamic content will be rendered here -->
                 <div class="loading-state">
                     <div class="loading-spinner"></div>
-                    <p class="loading-text" data-i18n="common.loading">جاري التحميل...</p>
+                    <p class="loading-text">جاري التحميل...</p>
                 </div>
             </div>
         </main>
@@ -175,10 +163,10 @@
     <!-- Hidden Print Container -->
     <div id="printContainer" style="display: none;"></div>
 
-    <!-- Hidden Audio Context for Beep -->
+    <!-- Hidden Audio -->
     <div id="audioContainer" style="display: none;"></div>
 
-    <!-- Application Scripts - CORRECTED PATHS -->
+    <!-- Application Scripts -->
     <script type="module" src="js/app.js"></script>
 </body>
 </html>
