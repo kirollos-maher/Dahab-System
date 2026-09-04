@@ -1,0 +1,474 @@
+/* ============================================
+   Thermal Label Printing Styles
+   For 58mm and 80mm jewelry tags
+   ============================================ */
+
+@media print {
+    /* Hide everything except the print label */
+    body * {
+        visibility: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Show only the print container and its children */
+    #printContainer,
+    #printContainer * {
+        visibility: visible !important;
+    }
+
+    #printContainer {
+        display: block !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        background: white !important;
+        padding: 4mm !important;
+        margin: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
+    }
+
+    /* Label Tag - 58mm Thermal Label */
+    .print-label {
+        width: 58mm !important;
+        max-width: 58mm !important;
+        min-height: 35mm !important;
+        padding: 3mm !important;
+        margin: 0 auto !important;
+        background: white !important;
+        border: 0.5px dashed #ccc !important;
+        border-radius: 2mm !important;
+        font-family: 'Courier New', monospace !important;
+        font-size: 8pt !important;
+        direction: ltr !important;
+        text-align: center !important;
+        box-shadow: none !important;
+        position: relative !important;
+        overflow: hidden !important;
+        page-break-after: always !important;
+    }
+
+    /* 80mm Label variant */
+    .print-label.label-80mm {
+        width: 80mm !important;
+        max-width: 80mm !important;
+        min-height: 40mm !important;
+        padding: 4mm !important;
+        font-size: 9pt !important;
+    }
+
+    /* Brand Header */
+    .print-header {
+        text-align: center !important;
+        border-bottom: 1px solid #333 !important;
+        padding-bottom: 1mm !important;
+        margin-bottom: 1.5mm !important;
+    }
+
+    .print-header .brand-name {
+        font-size: 12pt !important;
+        font-weight: bold !important;
+        color: #b8922f !important;
+        letter-spacing: 1px !important;
+    }
+
+    .print-header .brand-sub {
+        font-size: 7pt !important;
+        color: #666 !important;
+        font-weight: normal !important;
+    }
+
+    /* QR Code Container */
+    .print-qr {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 1mm 0 !important;
+        padding: 1mm !important;
+        background: white !important;
+        border-radius: 1mm !important;
+    }
+
+    .print-qr canvas,
+    .print-qr img {
+        width: 22mm !important;
+        height: 22mm !important;
+        max-width: 22mm !important;
+        max-height: 22mm !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+
+    /* Product Info Grid */
+    .print-info {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1mm 2mm !important;
+        margin: 1mm 0 !important;
+        padding: 1mm !important;
+        background: #f8f8f8 !important;
+        border-radius: 1mm !important;
+        font-size: 7pt !important;
+    }
+
+    .print-info .info-item {
+        display: flex !important;
+        justify-content: space-between !important;
+        padding: 0.5mm 0 !important;
+        border-bottom: 0.5px dotted #ddd !important;
+    }
+
+    .print-info .info-item:last-child,
+    .print-info .info-item:nth-last-child(2) {
+        border-bottom: none !important;
+    }
+
+    .print-info .info-label {
+        font-weight: bold !important;
+        color: #555 !important;
+        font-size: 6.5pt !important;
+    }
+
+    .print-info .info-value {
+        font-weight: 600 !important;
+        color: #222 !important;
+        font-size: 7pt !important;
+    }
+
+    .print-info .info-value.gold {
+        color: #b8922f !important;
+    }
+
+    /* SKU - Highlight */
+    .print-sku {
+        text-align: center !important;
+        font-size: 10pt !important;
+        font-weight: bold !important;
+        padding: 1mm !important;
+        margin: 1mm 0 !important;
+        background: #f0e6d0 !important;
+        border-radius: 1mm !important;
+        letter-spacing: 0.5px !important;
+        font-family: 'Courier New', monospace !important;
+        color: #1a1a2e !important;
+    }
+
+    /* Price Section */
+    .print-price {
+        text-align: center !important;
+        font-size: 11pt !important;
+        font-weight: bold !important;
+        color: #b8922f !important;
+        padding: 1mm !important;
+        margin: 1mm 0 !important;
+        border-top: 2px solid #b8922f !important;
+        border-bottom: 2px solid #b8922f !important;
+    }
+
+    /* Footer */
+    .print-footer {
+        text-align: center !important;
+        font-size: 5pt !important;
+        color: #999 !important;
+        margin-top: 1mm !important;
+        padding-top: 0.5mm !important;
+        border-top: 0.5px solid #ddd !important;
+    }
+
+    .print-footer .barcode-text {
+        font-family: 'Courier New', monospace !important;
+        letter-spacing: 1px !important;
+    }
+
+    /* Small 40mm tag for earrings */
+    .print-label.label-40mm {
+        width: 40mm !important;
+        max-width: 40mm !important;
+        min-height: 25mm !important;
+        padding: 2mm !important;
+        font-size: 6pt !important;
+    }
+
+    .print-label.label-40mm .print-header .brand-name {
+        font-size: 9pt !important;
+    }
+    .print-label.label-40mm .print-qr canvas,
+    .print-label.label-40mm .print-qr img {
+        width: 15mm !important;
+        height: 15mm !important;
+        max-width: 15mm !important;
+        max-height: 15mm !important;
+    }
+    .print-label.label-40mm .print-sku {
+        font-size: 8pt !important;
+        padding: 0.5mm !important;
+    }
+    .print-label.label-40mm .print-info {
+        font-size: 5.5pt !important;
+        gap: 0.5mm !important;
+        padding: 0.5mm !important;
+    }
+    .print-label.label-40mm .print-price {
+        font-size: 9pt !important;
+        padding: 0.5mm !important;
+    }
+
+    /* Two-up layout for 58mm */
+    .print-label.two-up {
+        width: 116mm !important;
+        max-width: 116mm !important;
+        display: grid !important;
+        grid-template-columns: 58mm 58mm !important;
+        gap: 2mm !important;
+        min-height: 35mm !important;
+        padding: 2mm !important;
+    }
+
+    .print-label.two-up .print-label-inner {
+        border: 0.5px dashed #ddd !important;
+        border-radius: 2mm !important;
+        padding: 2mm !important;
+    }
+
+    /* Page setup for thermal printer */
+    @page {
+        size: 58mm 35mm !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    @page label-80mm {
+        size: 80mm 40mm !important;
+    }
+
+    @page label-40mm {
+        size: 40mm 25mm !important;
+    }
+
+    /* Auto-fit multiple labels */
+    .print-container-multi {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 2mm !important;
+        justify-content: flex-start !important;
+        padding: 2mm !important;
+        background: white !important;
+    }
+
+    .print-container-multi .print-label {
+        margin: 0 !important;
+        page-break-after: avoid !important;
+    }
+}
+
+/* ============================================
+   Screen Preview Styles
+   ============================================ */
+.print-preview-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    padding: 24px;
+    margin-top: 16px;
+    box-shadow: var(--shadow);
+}
+
+.print-preview-card .preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.print-preview-card .preview-header h3 {
+    font-size: var(--font-size-lg);
+    color: var(--text-primary);
+}
+
+.print-preview-card .preview-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.preview-label-mock {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 16px;
+    background: white;
+    border-radius: var(--radius-sm);
+    border: 2px dashed var(--border-color);
+    box-shadow: var(--shadow);
+    transition: all var(--transition);
+}
+
+.preview-label-mock .mock-header {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.preview-label-mock .mock-header .mock-brand {
+    font-size: 14px;
+    font-weight: bold;
+    color: #b8922f;
+}
+
+.preview-label-mock .mock-qr {
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+}
+
+.preview-label-mock .mock-qr canvas {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+.preview-label-mock .mock-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 8px;
+    font-size: 11px;
+    background: #f8f8f8;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 4px 0;
+}
+
+.preview-label-mock .mock-info .mock-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.preview-label-mock .mock-sku {
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    background: #f0e6d0;
+    padding: 4px;
+    border-radius: 4px;
+    margin: 4px 0;
+    font-family: monospace;
+}
+
+.preview-label-mock .mock-price {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #b8922f;
+    padding: 4px;
+    margin: 4px 0;
+    border-top: 2px solid #b8922f;
+    border-bottom: 2px solid #b8922f;
+}
+
+.preview-label-mock .mock-footer {
+    text-align: center;
+    font-size: 8px;
+    color: #999;
+    margin-top: 4px;
+    padding-top: 4px;
+    border-top: 0.5px solid #ddd;
+}
+
+/* Receipt Print */
+@media print {
+    .receipt-print {
+        font-family: 'Courier New', monospace;
+        font-size: 10pt;
+        direction: ltr;
+        text-align: left;
+        padding: 8mm;
+        max-width: 80mm;
+        margin: 0 auto;
+        background: white;
+        color: black;
+    }
+    
+    .receipt-print .receipt-header {
+        text-align: center;
+        border-bottom: 1px dashed #333;
+        padding-bottom: 6px;
+        margin-bottom: 6px;
+    }
+    
+    .receipt-print .receipt-header .store-name {
+        font-size: 16pt;
+        font-weight: bold;
+        color: #b8922f;
+    }
+    
+    .receipt-print .receipt-header .store-info {
+        font-size: 8pt;
+        color: #666;
+    }
+    
+    .receipt-print .receipt-items {
+        margin: 6px 0;
+    }
+    
+    .receipt-print .receipt-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 2px 0;
+        font-size: 9pt;
+        border-bottom: 0.5px dotted #ddd;
+    }
+    
+    .receipt-print .receipt-item .item-desc {
+        flex: 1;
+    }
+    
+    .receipt-print .receipt-item .item-price {
+        font-weight: bold;
+        white-space: nowrap;
+    }
+    
+    .receipt-print .receipt-totals {
+        border-top: 1px dashed #333;
+        padding-top: 6px;
+        margin-top: 6px;
+    }
+    
+    .receipt-print .receipt-totals .total-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 2px 0;
+    }
+    
+    .receipt-print .receipt-totals .grand-total {
+        font-size: 14pt;
+        font-weight: bold;
+        color: #b8922f;
+        border-top: 2px solid #b8922f;
+        padding-top: 4px;
+        margin-top: 4px;
+    }
+    
+    .receipt-print .receipt-footer {
+        text-align: center;
+        font-size: 7pt;
+        color: #999;
+        margin-top: 8px;
+        padding-top: 6px;
+        border-top: 1px dashed #ddd;
+    }
+    
+    .receipt-print .receipt-qr {
+        text-align: center;
+        margin: 4px 0;
+    }
+    
+    .receipt-print .receipt-qr canvas {
+        width: 60px;
+        height: 60px;
+    }
+}
